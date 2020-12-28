@@ -1,0 +1,28 @@
+version: '3.7'
+
+services: 
+  forum_db:
+    restart: always
+    image: sameersbn/postgresql:12-20200524
+    ports:
+      - "5432:5432"
+    environment:
+      - DEBUG=false
+      - DB_USER=postgres
+      - DB_PASS=postgres
+      - DB_NAME=postgres
+    command: "--wal_keep_segments=32 --logging_collector=off"
+    volumes:
+      - postgresql:/var/lib/postgresql
+  forum_api:
+    build: .
+    container_name: forum_api
+    command: python /usr/src/manage.py runserver 0.0.0.0:8000
+    volumes: 
+      - .:/usr/src
+    ports: 
+      - 8000:8000
+    depends_on: 
+      - forum_db
+volumes: 
+  postgresql:
