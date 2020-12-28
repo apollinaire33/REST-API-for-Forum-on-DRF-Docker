@@ -5,6 +5,9 @@ Docker-compose: move to project folder in your bash-terminal of Docker and run c
 docker-compose up<br>
 <br>
 <br>
+Don't forget to change database in settings.py for Docker or Venv!<br>
+<br>
+<br>
 API Enpoints:<br>
 <br>
 For getting access to authorized only/author only use Postman/frontend client providing authorization bearer token<br>
