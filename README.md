@@ -1,5 +1,6 @@
 API Enpoints:<br>
-For getting access to authorized only/author only use Postman/frontend client providing authorization bearer token
+<br>
+For getting access to authorized only/author only use Postman/frontend client providing authorization bearer token<br>
 <br>
 /api/v1/signup    - Registration(via Postman/frontend client providing "name" "email" "password" in body)<br>
 <br>
