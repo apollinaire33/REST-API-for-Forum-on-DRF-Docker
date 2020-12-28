@@ -1,3 +1,7 @@
+Docker-compose: move to project folder in your bash-terminal of Docker and run command:<br>
+docker-compose up<br>
+<br>
+<br>
 API Enpoints:<br>
 <br>
 For getting access to authorized only/author only use Postman/frontend client providing authorization bearer token<br>
