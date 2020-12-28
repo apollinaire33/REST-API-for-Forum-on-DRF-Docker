@@ -8,7 +8,7 @@ For getting access to authorized only/author only use Postman/frontend client pr
 <br>
 /api/v1/posts    - Post List for all<br>
 <br>
-/api/v1/posts/post/id     - Post retrive for all<br>    
+/api/v1/posts/post/id     - Post retrive for all<br>
 <br>
 /api/v1/posts/create      - Create post for authorized only<br>
 <br>
