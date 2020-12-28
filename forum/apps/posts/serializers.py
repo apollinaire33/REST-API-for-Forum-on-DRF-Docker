@@ -3,17 +3,22 @@ from .models import Post, Comment
 
 # serializers for posts
 class PostSerializer(serializers.ModelSerializer):
-
+    
     class Meta:
         model = Post
         fields = ('id', 'title', 'author', 'category', 'pub_date', 'likes', 'dislikes')
 
 
 class PostDetailSerializer(serializers.ModelSerializer):
+    comments_to_post = serializers.SerializerMethodField()
 
     class Meta:
         model = Post
-        fields = ('id', 'title', 'author', 'category', 'pub_date', 'likes', 'dislikes', 'text')
+        fields = ('id', 'title', 'author', 'category', 'pub_date', 'likes', 'dislikes', 'text', 'comments_to_post')
+
+    def get_comments_to_post(self, instance):
+        comments_to_post = instance.comments_to_post.order_by('id')
+        return CommentListSerializer(comments_to_post, many=True).data
 
 
 class PostCreateUpdateSerializer(serializers.ModelSerializer):
