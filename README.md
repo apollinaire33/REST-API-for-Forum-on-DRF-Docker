@@ -1,3 +1,6 @@
+Virtual Env: move to project folder and run 'venv\Scripts\activate' for Windows or 'source venv\Scripts\activate' for *nix systems<br>
+<br>
+<br>
 Docker-compose: move to project folder in your bash-terminal of Docker and run command:<br>
 docker-compose up<br>
 <br>
